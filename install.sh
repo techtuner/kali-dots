@@ -7,7 +7,7 @@ cp ./.vimrc ~
 cp greeting.txt ~
 cp -r wallpaper ~/Pictures/
 echo "lolcat ~/greeting.txt" >> ~/.zshrc
-
+cp - r ./tmux/.tmux.conf ~
 
 sudo cp -r ./fonts/Monaco /usr/share/fonts/truetype
 sudo cp -r ./fonts/MonoLisa /usr/share/fonts/truetype
