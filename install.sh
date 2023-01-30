@@ -6,7 +6,7 @@ sudo apt install python3-venv
 sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 
 cp ./.vimrc ~
-cp -r ./terminator ~/.config/
+# cp -r ./terminator ~/.config/
 cp -r wallpaper ~/Pictures/
 cp ./tmux/.tmux.conf ~
 
