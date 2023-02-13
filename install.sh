@@ -10,7 +10,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cp ./.vimrc ~
 cp -r wallpaper ~/Pictures/
 cp ./tmux/.tmux.conf ~
-cp japanese.txt ~
+cp banner ~
 
 sudo cp -r ./fonts/Fira-Code /usr/share/fonts/truetype
-echo "lolcat ~/japanese.txt" >> ~/.zshrc
+echo "lolcat ~/banner" >> ~/.zshrc
