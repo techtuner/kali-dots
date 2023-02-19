@@ -4,4 +4,6 @@ alias pip="pip3"
 alias lg="lazygit" # Works only inside a git folder or can be used to initialize a git folder
 alias e="exit"
 alias dots="cd ~/Downloads/kali-dots && ls"
-alias wallpapers=" gio open ~/Pictures/wallpapers" 
+alias wallpapers="gio open ~/Pictures/wallpapers" 
+alias htbo="sudo openvpn ~/Desktop/Boxes/HTB/vpns/lab_techtuner.ovpn"
+alias thmo="sudo openvpn ~/Desktop/Boxes/THM/vpns/techtuner.ovpn"
