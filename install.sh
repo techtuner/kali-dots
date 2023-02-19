@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt-get update -y && sudo apt-get full-upgrade -y
 
 # Oh-My-Zsh
@@ -15,6 +17,15 @@ cp -r wallpaper ~/Pictures/
 cp ./tmux/.tmux.conf ~
 cp banner ~
 cp -r ./zsh ~
+
+mkdirBoxes(){
+  mkdir ~/Desktop/Boxes
+  mkdir ~/Desktop/Boxes/HTB && mkdir ~/Desktop/Boxes/HTB/vpns
+  mkdir ~/Desktop/Boxes/THM && mkdir ~/Desktop/Boxes/THM/vpns
+
+}
+
+mkdirBoxes
 
 sudo cp -r ./fonts/Fira-Code /usr/share/fonts/truetype
 echo "lolcat ~/banner" >> ~/.zshrc
