@@ -40,6 +40,11 @@ mkdirBoxes(){
 mkdirBoxes
 
 sudo cp -r ./fonts/Fira-Code /usr/share/fonts/truetype
-echo "lolcat ~/banner" >> ~/.zshrc
+if grep -Fxq "lolcat ~/banner" ~/.zshrc
+then
+  echo "Exists"
+else
+  echo "lolcat ~/banner" >> ~/.zshrc
+fi
 echo "source ~/zsh/aliases.zsh" >> ~/.zshrc
 source ~/.zshrc
