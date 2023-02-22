@@ -58,6 +58,7 @@ then
 else
   echo "lolcat ~/banner" >> ~/.zshrc
   echo "source ~/zsh/aliases.zsh" >> ~/.zshrc
+  echo "ZSH_THEME='$ZSH/custom/themes/techtuner.zsh-theme'" >> ~/.zshrc
 fi
 cp ./techtuner.zsh-theme ~/.oh-my-zsh/custom/themes/
 source ~/.zshrc
