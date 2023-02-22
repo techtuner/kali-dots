@@ -32,7 +32,7 @@ cd ~/tools/sherlock
 python3 -m pip install -r requirements.txt
 chmod +x ./sherlock/sherlock.py
 sudo ln -s ~/tools/sherlock/sherlock/sherlock.py /usr/bin/sherlock
-
+cd ../../
 cp ./.vimrc ~
 cp -r wallpaper ~/Pictures/
 cp ./tmux/.tmux.conf ~
@@ -59,4 +59,5 @@ else
   echo "lolcat ~/banner" >> ~/.zshrc
   echo "source ~/zsh/aliases.zsh" >> ~/.zshrc
 fi
+cp ./techtuner.zsh-theme ~/.oh-my-zsh/custom/themes/
 source ~/.zshrc
