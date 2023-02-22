@@ -6,7 +6,8 @@ sudo apt-get install bless terminator name-that-hash python3-pip curl dnsrecon e
 
 sudo apt install python3-venv -y
 sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+exec zsh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 mkdir ~/tools
@@ -40,11 +41,14 @@ mkdirBoxes(){
 mkdirBoxes
 
 sudo cp -r ./fonts/Fira-Code /usr/share/fonts/truetype
+sudo cp -r ./fonts/Monaoc /usr/share/fonts/truetype
+sudo cp -r ./fonts/'Anonymous Pro' /usr/share/fonts/truetype
+
 if grep -Fxq "lolcat ~/banner" ~/.zshrc
 then
   echo "Exists"
 else
   echo "lolcat ~/banner" >> ~/.zshrc
+  echo "source ~/zsh/aliases.zsh" >> ~/.zshrc
 fi
-echo "source ~/zsh/aliases.zsh" >> ~/.zshrc
 source ~/.zshrc
