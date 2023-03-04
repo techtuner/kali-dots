@@ -7,16 +7,18 @@ rm -f packages.microsoft.gpg
 
 sudo apt-get update -y && sudo apt-get full-upgrade -y
 
-sudo apt-get install bless terminator name-that-hash python3-pip curl dnsrecon enum4linux feroxbuster gobuster lolcat impacket-scripts nbtscan nikto onesixtyone oscanner redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf zsh tmux cargo libimage-exiftool-perl code -y
+sudo apt-get install bless terminator name-that-hash python3-pip curl dnsrecon enum4linux python3-virtualenv feroxbuster gobuster lolcat impacket-scripts nbtscan nikto onesixtyone oscanner redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf zsh tmux cargo libimage-exiftool-perl code -y
 
-sudo apt install python3-venv -y
+# sudo apt install python3-venv -y
 sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 cargo install urlencode
 export PATH=/home/techtuner/.cargo/bin/:$PATH
 
+# Change to Pip 22.2.2 which fixes the external environment issue in debian
+python -m pip install pip==22.2.2 --upgrade --break-system-packages
+export PATH=/home/techtuner/.local/bin:$PATH
 
 mkdir ~/tools
 cd ~/tools
@@ -35,8 +37,8 @@ sudo ln -s ~/tools/sherlock/sherlock/sherlock.py /usr/bin/sherlock
 cd ../../
 cp ./.vimrc ~
 cp -r wallpaper ~/Pictures/
-cp ./tmux/.tmux.conf ~
-cp banner ~
+# cp ./tmux/.tmux.conf ~
+# cp banner ~
 cp -r ./zsh ~
 
 mkdirBoxes(){
@@ -52,13 +54,13 @@ sudo cp -r ./fonts/Fira-Code /usr/share/fonts/truetype
 sudo cp -r ./fonts/Monaoc /usr/share/fonts/truetype
 sudo cp -r ./fonts/'Anonymous Pro' /usr/share/fonts/truetype
 
-if grep -Fxq "lolcat ~/banner" ~/.zshrc
-then
-  echo "Exists"
-else
-  echo "lolcat ~/banner" >> ~/.zshrc
-  echo "source ~/zsh/aliases.zsh" >> ~/.zshrc
-  echo "ZSH_THEME='$ZSH/custom/themes/techtuner.zsh-theme'" >> ~/.zshrc
-fi
-cp ./techtuner.zsh-theme ~/.oh-my-zsh/custom/themes/
+# if grep -Fxq "lolcat ~/banner" ~/.zshrc
+# then
+#   echo "Exists"
+# else
+#   echo "lolcat ~/banner" >> ~/.zshrc
+#   echo "source ~/zsh/aliases.zsh" >> ~/.zshrc
+#   echo "ZSH_THEME='$ZSH/custom/themes/techtuner.zsh-theme'" >> ~/.zshrc
+# fi
+# cp ./techtuner.zsh-theme ~/.oh-my-zsh/custom/themes/
 source ~/.zshrc
