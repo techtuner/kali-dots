@@ -47,7 +47,7 @@ mkdirBoxes(){
   mkdir ~/Desktop/Boxes/THM && mkdir ~/Desktop/Boxes/THM/vpns
 
 }
-
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 mkdirBoxes
 
 sudo cp -r ./fonts/Fira-Code /usr/share/fonts/truetype
