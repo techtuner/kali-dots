@@ -5,12 +5,15 @@ sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
 
+wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
+sudo dpkg -i nvim-linux64.deb
+rm -rf nvim-linux64.deb
+
+
 sudo apt-get update -y && sudo apt-get full-upgrade -y
 
 sudo apt-get install bless terminator name-that-hash python3-pip curl dnsrecon enum4linux python3-virtualenv feroxbuster gobuster lolcat impacket-scripts nbtscan nikto onesixtyone oscanner redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf zsh tmux cargo libimage-exiftool-perl code -y
 
-# sudo apt install python3-venv -y
-sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 cargo install urlencode
@@ -19,6 +22,9 @@ export PATH=/home/techtuner/.cargo/bin/:$PATH
 # Change to Pip 22.2.2 which fixes the external environment issue in debian
 python -m pip install pip==22.2.2 --upgrade --break-system-packages
 export PATH=/home/techtuner/.local/bin:$PATH
+
+sudo apt install python3-venv -y
+sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 
 mkdir ~/tools
 cd ~/tools
