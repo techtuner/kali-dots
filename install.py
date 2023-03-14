@@ -26,7 +26,7 @@ def autorecon_urlencode():
     os.system("sudo apt-get install python3-virtualenv -y")
     os.system("sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git")
     print("Installing URL Encode")
-    os.sytem("cargo install urlencode")
+    os.system("cargo install urlencode")
     os.system(f"export PATH={home}/.cargo/bin/:$PATH")
 
 def boxes():
