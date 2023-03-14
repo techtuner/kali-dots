@@ -105,11 +105,42 @@ def copy_configs():
     os.system(f"echo 'source ~/zsh/aliases.zsh' >> {home}/.zshrc")
     os.system(f"source {home}/.zshrc")
 
+def code_extensions():
+    extensions = ["formulahendry.auto-complete-tag",
+"beardedbear.beardedtheme",
+"formulahendry.auto-rename-tag",
+"naumovs.color-highlight",
+"miguelsolorio.fluent-icons",
+"golang.go",
+"naumovs.color-highlight",
+"mvllow.rose-pine",
+"visualstudioexptteam.vscodeintellicode",
+"ritwickdey.liveserver",
+"sumneko.lua",
+"yzhang.markdown-all-in-one",
+"christian-kohler.path-intellisense",
+"esbenp.prettier-vscode",
+"miguelsolorio.symbols",
+"jaakko.black",
+"MS-vsliveshare.vsliveshare",
+"steoates.autoimport",
+"streetsidesoftware.code-spell-checker",
+"dbaeumer.vscode-eslint",
+"bradlc.vscode-tailwindcss",
+"ms-python.python",
+"rust-lang.rust-analyzer",
+"ms-python.black-formatter",
+"aaron-bond.better-comments",
+]
+    for extension in extensions:
+        os.system(f"code --install-extension {extension}")
+
 code_neovim()
 update_upgrade()
 install_apps()
 autorecon_urlencode()
 boxes()
 copy_fonts()
-copy_configs
+copy_configs()
+code_extensions()
 install_tools()
