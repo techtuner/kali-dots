@@ -1,0 +1,23 @@
+[global_config]
+  window_state = maximise
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    background_darkness = 0.95
+    background_type = transparent
+    font = FiraCode NF Medium 16
+    foreground_color = "#ebdbb2"
+    palette = "#26233a:#eb6f91:#9ccfd8:#f6c177:#31748f:#65618d:#c4a7e7:#d3d7cf:#26233a:#eb6f91:#9ccfd8:#f6c177:#31748f:#65618d:#c4a7e7:#eeeeec"
+    use_system_font = False
+    use_theme_colors = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
+  [[Rose Pine]]
