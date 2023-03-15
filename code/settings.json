@@ -1,0 +1,150 @@
+{
+  // Workbench Settings
+  "workbench.colorTheme": "Material Theme Ocean High Contrast",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.iconTheme": "symbols",
+  "workbench.startupEditor": "none",
+  "workbench.sideBar.location": "right",
+  "workbench.editor.showTabs": false,
+  "workbench.editor.enablePreview": false,
+  "breadcrumbs.enabled": false,
+  "workbench.list.smoothScrolling": true,
+  "window.menuBarVisibility": "compact",
+  "workbench.layoutControl.enabled": false,
+  // Editor and Terminal Settings
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.fontWeight": "normal",
+  "editor.colorDecorators": false,
+  "editor.cursorBlinking": "expand",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.linkedEditing": true,
+  "editor.lineNumbers": "off",
+  "editor.lightbulb.enabled": false,
+  "editor.overviewRulerBorder": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.wordWrap": "on",
+  "editor.cursorStyle": "line-thin",
+  "editor.smoothScrolling": true,
+  "explorer.sortOrder": "type",
+  "editor.tabSize": 4,
+  "terminal.integrated.smoothScrolling": true,
+  "files.autoSave": "afterDelay",
+  "files.trimFinalNewlines": true,
+  // Files and Search
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "search.exclude": {
+    "**/vendor/{[^l],?[^ai]}*": true,
+    "**/public/{[^i],?[^n]}*": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/_ide_helper.php": true,
+    "**/composer.lock": true,
+    "**/package-lock.json": true,
+    "storage": true,
+    ".phpunit.result.cache": true
+  },
+  // Typography
+  "terminal.integrated.fontFamily": "'FiraCode NF', sanserif",
+  "editor.fontSize": 18,
+  "editor.lineHeight": 2,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.lineHeight": 1.5,
+  "editor.fontFamily": "dank mono,monaco,Comic Sans MS, dank mono,  monospace",
+  "debug.console.fontFamily": "dank mono,monaco,monospace",
+  "errorLens.fontFamily": "dank mono.monaco,monospace",
+  "importCost.fontStyle": "italic",
+  "errorLens.fontStyleItalic": true,
+  // JavaScript
+  "[javascript]": {
+    "editor.maxTokenizationLineLength": 2500,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  // Markdown
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  // Go
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.defaultFormatter": "golang.go"
+  },
+  // Rust
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.inlayHints.enabled": "off",
+
+  },
+  "rust-analyzer.rustfmt.rangeFormatting.enable": true,
+  // Lua
+  "[lua]": {
+    "editor.quickSuggestions": {
+      "comments": "inline",
+      "other": "on",
+      "strings": "on"
+    },
+    "editor.semanticHighlighting.enabled": true,
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  // Python
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+  },
+  "python.languageServer": "Pylance",
+  // Git
+  "git.autofetch": true,
+  "git.smartCommitChanges": "all",
+  "git.enableSmartCommit": true,
+  "git.branchSortOrder": "alphabetically",
+  // Extensions
+  // Tailwind
+  "tailwindCSS.files.exclude": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/.hg/**"
+  ],
+  "tailwindCSS.emmetCompletions": true,
+  // Color Highlight
+  "color-highlight.enable": true,
+  "color-highlight.markerType": "background",
+  "color-highlight.languages": ["*"],
+  // Symbols
+  "symbols.hidesExplorerArrows": true,
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": false,
+  "window.zoomLevel": 1
+}
+
