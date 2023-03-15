@@ -14,6 +14,14 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost packer.lua source <afile> | PackerSync
+  augroup end
+
+]]
+
 local status, packer = pcall(require, "packer")
 if not status then
     print("Packer is not installed install from https://github.com/wbthomason/packer.nvim'")
