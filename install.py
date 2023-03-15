@@ -14,7 +14,7 @@ def update_upgrade():
     os.system('sudo apt-get update -y && sudo apt-get full-upgrade -y && sudo apt autoremove -y')
 
 def install_apps():
-    apps = "bless terminator name-that-hash python3-pip curl dnsrecon enum4linux python3-virtualenv feroxbuster gobuster impacket-scripts nbtscan nikto onesixtyone oscanner redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf tmux cargo libimage-exiftool-perl code"
+    apps = "bless terminator name-that-hash python3-pip curl dnsrecon enum4linux python3-virtualenv feroxbuster gobuster impacket-scripts nbtscan nikto onesixtyone oscanner redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf tmux cargo libimage-exiftool-perl code golang-go"
     apps_list = apps.split(" ")
     for app in apps_list:
         os.system(f'sudo apt-get install {app} -y')
@@ -99,11 +99,13 @@ def copy_configs():
     os.system(f"cp -r {current_path}/wallpapers {home}/Pictures/")
     os.system(f"cp -r {current_path}/nvim/ {home}/.config/")
     os.system(f"cp -r {current_path}/terminator/ {home}/.config/")
-    os.system(f"cp -r {current_path}/zsh/aliases.zsh {home}")
+    os.system(f"cp -r {current_path}/zsh/ {home}")
     os.system(f"cp {current_path}/.vimrc {home}")
     os.system(f"cp {current_path}/tmux/.tmux.conf {home}")
     os.system(f"echo 'source ~/zsh/aliases.zsh' >> {home}/.zshrc")
     os.system(f"source {home}/.zshrc")
+    os.system("git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim")
 
 def code_extensions():
     extensions = ["formulahendry.auto-complete-tag",
@@ -113,15 +115,15 @@ def code_extensions():
 "miguelsolorio.fluent-icons",
 "golang.go",
 "naumovs.color-highlight",
-"mvllow.rose-pine",
 "visualstudioexptteam.vscodeintellicode",
 "ritwickdey.liveserver",
 "sumneko.lua",
 "yzhang.markdown-all-in-one",
 "christian-kohler.path-intellisense",
 "esbenp.prettier-vscode",
+"usernamehw.errorlens",
+"wix.vscode-import-cost",
 "miguelsolorio.symbols",
-"jaakko.black",
 "MS-vsliveshare.vsliveshare",
 "steoates.autoimport",
 "streetsidesoftware.code-spell-checker",
@@ -131,9 +133,13 @@ def code_extensions():
 "rust-lang.rust-analyzer",
 "ms-python.black-formatter",
 "aaron-bond.better-comments",
+"equinusocio.vsc-community-material-theme"
 ]
     for extension in extensions:
         os.system(f"code --install-extension {extension}")
+    os.system(f"cp {current_path}/code/settings.json {home}/.config/Code/User/")
+    os.system(f"cp {current_path}/code/keybindings.json {home}/.config/Code/User/")
+
 
 code_neovim()
 update_upgrade()
