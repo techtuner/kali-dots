@@ -103,7 +103,7 @@ def copy_fonts():
     os.system(f"sudo cp -r {current_path}/fonts/'Dank Mono' /usr/share/fonts/opentype")
 
 def copy_configs():
-    os.system(f"cp -r {current_path}/wallpapers {home}/Pictures/")
+    os.system(f"cp -r {current_path}/wallpaper {home}/Pictures/")
     os.system(f"cp -r {current_path}/nvim/ {home}/.config/")
     os.system(f"cp -r {current_path}/terminator/ {home}/.config/")
     os.system(f"cp -r {current_path}/zsh/ {home}")
