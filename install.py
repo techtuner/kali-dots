@@ -40,7 +40,9 @@ def boxes():
     else:
         os.mkdir(f"{home}/Desktop/Boxes")
         os.mkdir(f"{home}/Desktop/Boxes/HTB")
+        os.mkdir(f"{home}/Desktop/Boxes/HTB/vpns")
         os.mkdir(f"{home}/Desktop/Boxes/THM")
+        os.mkdir(f"{home}/Desktop/Boxes/THM/vpns")
 
 def install_tools():
     tools_path = f"{home}/tools/"
