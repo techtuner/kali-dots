@@ -1,15 +1,20 @@
 import os
 from pathlib import Path
+import subprocess
 current_path = os.getcwd()
 user = os.getlogin()
 home = f"/home/{user}"
+
 
 def code_neovim():
     print('Adding Code Installation')
     os.system("wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg \n sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/ \n sudo sh -c 'echo \"deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main\" > /etc/apt/sources.list.d/vscode.list' \n rm -rf packages.microsoft.gpg")
     print('Add Neovim and Install Neovim')
     os.system("wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb \n sudo dpkg -i nvim-linux64.deb \n rm -rf nvim-linux64.deb")
-
+    os.system(f"chmod +x {current_path}/nvm_ins.sh")
+    subprocess.call(f"./nvm_ins.sh")
+    
+	
 def update_upgrade():
     os.system('sudo apt-get update -y && sudo apt-get full-upgrade -y && sudo apt autoremove -y')
 
