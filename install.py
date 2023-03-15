@@ -131,7 +131,6 @@ def code_extensions():
 "miguelsolorio.symbols",
 "MS-vsliveshare.vsliveshare",
 "steoates.autoimport",
-"streetsidesoftware.code-spell-checker",
 "dbaeumer.vscode-eslint",
 "bradlc.vscode-tailwindcss",
 "ms-python.python",
