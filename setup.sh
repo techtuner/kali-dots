@@ -13,7 +13,7 @@ sudo apt autoremove -y
 installing_apps(){
 	sudo apt install cargo gcc gdb cmake make git curl wget net-tools software-properties-common python3 python3-pip python3-venv golang gh routersploit netexec autorecon dex2jar jd-gui jadx apktool apksigner hexedit bytecode-viewer redis-tools dnsrecon gobuster feroxbuster nikto nmap sslscan libimage-exiftool-perl python3-impacket ghidra strace ltrace steghide nuclei afl++ protobuf-compiler ruby whatweb osrframework sherlock seclists sublist3r wifite wifiphisher dnsmasq kitty fzf fd-find ripgrep zoxide netexec mitmproxy default-jdk default-jre hexcurse gradle tmux bat gh nodejs npm -y
 
-cargo install urlencode rustscan eza
+cargo install urlencode rustscan eza starship
 
 mkdir -p ~/tools/
 mkdir -p ~/workspace/
