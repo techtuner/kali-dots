@@ -53,6 +53,7 @@ sudo cp -r $cwd/fonts/'Fira Code' /usr/share/fonts/truetype
 cp -r $cwd/wallpapers/ ~/Pictures/
 cp -r $cwd/configs/nvim ~/.config/
 cp -r $cwd/configs/kitty ~/.config/
+cp -r $cwd/configs/starship/starship.toml ~/.config/
 cp -r $cwd/configs/zsh ~
 cp -r $cwd/configs/zsh/.zshrc ~ && rm -rf ~/zsh/.zshrc
 cp -r $cwd/configs/tmux/ ~
