@@ -1,0 +1,31 @@
+# General Prompt Format (Fix: Removed extra newlines)
+format = "$directory$git_branch$git_status$character "
+
+# User and Hostname
+[username]
+format = "[$user]($style) "
+style_user = "blue"
+show_always = true
+
+# Directory
+[directory]
+truncation_length = 3
+format = "[$path]($style) "
+style = "bold purple"
+
+# Git Branch
+[git_branch]
+format = "on [$branch]($style) "
+style = "red"
+
+# Git Status
+[git_status]
+format = "([$all_status]($style) )"
+style = "green"
+
+# Character Prompt (No newline issues)
+[character]
+success_symbol = "[❯❯](bold green)"
+error_symbol = "[❯❯](bold red)"
+vimcmd_symbol = "[❮❮](bold purple)"
+
